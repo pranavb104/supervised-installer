@@ -115,6 +115,10 @@ fi
 info "Restarting NetworkManager"
 systemctl restart "${SERVICE_NM}"
 
+#Sleep for sometime , so that you can start VPN Services
+info "Start your VPN again so that instalation succeeds"
+sleep 30
+
 # Parse command line parameters
 while [[ $# -gt 0 ]]; do
     arg="$1"
